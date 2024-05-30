@@ -1,79 +1,62 @@
-*,
 html {
+	height: 100%;
+}
+
+body {
 	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
 }
 
-.text-blue {
-	color: blue;
-}
-
-.text-green {
-	color: green;
-}
-
-.text-sm {
-	font-size: 12px;
-}
-
-h1 {
-	color: red;
-}
-
-.button {
-	color: white;
-	background-color: black;
-	padding: 10px 20px;
-	border-radius: 10px;
-	cursor: pointer;
-	width: fit-content;
-	border: none;
-	transition: background-color 0.3s, color 0.3s;
-}
-
-.button:hover {
-	color: black;
-	background-color: gray;
-}
-
-.button:active {
-	color: red;
-	background-color: green;
-}
-
-.button-disable:hover {
-	color: black;
-	background-color: gray;
-}
-
-.button-disable:active {
-	color: black;
-	background-color: gray;
-}
-
-.button:disabled {
+.bg {
+	animation: slide 3s ease-in-out infinite alternate;
+	background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+	bottom: 0;
+	left: -50%;
 	opacity: 0.5;
+	position: fixed;
+	right: -50%;
+	top: 0;
+	z-index: -1;
 }
 
-.navbar {
-	color: red;
-	background: #000;
-	padding: 20px;
+.bg2 {
+	animation-direction: alternate-reverse;
+	animation-duration: 4s;
+}
+
+.bg3 {
+	animation-duration: 5s;
 }
 
 .content {
-	padding: 20px;
-	flex-grow: 1;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 0.25em;
+	box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+	box-sizing: border-box;
+	left: 50%;
+	padding: 10vmin;
+	position: fixed;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
-.footer {
-	padding: 20px;
-	background: green;
+h1 {
+	font-family: monospace;
 }
 
-.container {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
+.text-md {
+	font-size: medium;
+}
+
+.text-red {
+	color: red;
+}
+
+@keyframes slide {
+	0% {
+		transform: translateX(-25%);
+	}
+	100% {
+		transform: translateX(25%);
+	}
 }
